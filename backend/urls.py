@@ -5,7 +5,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('microsoft/', include('microsoft_auth.urls', namespace='microsoft')),
+    #path('microsoft/', include('microsoft_auth.urls', namespace='microsoft')),
 ]
 
 if settings.DEBUG:

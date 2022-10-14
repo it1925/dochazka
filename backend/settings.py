@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',  # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'django_microsoft_auth',
+    #'django_microsoft_auth',
 
     # key django CMS modules
     'cms',
@@ -118,7 +118,7 @@ TEMPLATES = [
 
                 'cms.context_processors.cms_settings',
                 'sekizai.context_processors.sekizai',
-                'django_microsoft_auth.microsoft_auth.context_processors.microsoft',
+                # 'django_microsoft_auth.microsoft_auth.context_processors.microsoft',
 
             ],
         },
@@ -126,7 +126,7 @@ TEMPLATES = [
 ]
 
 AUTHENTICATION_BACKENDS = [
-    'microsoft_auth.backends.MicrosoftAuthenticationBackend',
+    # 'microsoft_auth.backends.MicrosoftAuthenticationBackend',
     'django.contrib.auth.backends.ModelBackend' # if you also want to use Django's authentication
     # I recommend keeping this with at least one database superuser in case of unable to use others
 ]
@@ -173,12 +173,12 @@ if not DEBUG:
     ]
 
 
-MICROSOFT_AUTH_CLIENT_ID = '8c7084e8-640d-4fd8-8961-f28ac5f65ac5'
-MICROSOFT_AUTH_CLIENT_SECRET = '60aa07b2-8849-44d0-8ef8-9d98153aa8bb'
-MICROSOFT_AUTH_TENANT_ID = '97c2b87c-be8d-4fad-a461-897ba09bdf32'
-
-MICROSOFT_AUTH_LOGIN_TYPE = 'ma'
-MICROSOFT_AUTH_LOGIN_TYPE = 'xbl'
+# MICROSOFT_AUTH_CLIENT_ID = '8c7084e8-640d-4fd8-8961-f28ac5f65ac5'
+# MICROSOFT_AUTH_CLIENT_SECRET = '60aa07b2-8849-44d0-8ef8-9d98153aa8bb'
+# MICROSOFT_AUTH_TENANT_ID = '97c2b87c-be8d-4fad-a461-897ba09bdf32'
+#
+# MICROSOFT_AUTH_LOGIN_TYPE = 'ma'
+# MICROSOFT_AUTH_LOGIN_TYPE = 'xbl'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
